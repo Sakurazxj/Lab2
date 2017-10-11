@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+	
+		<action name="QueryAuthor" class="MyLibrary.QueryAction">
+			<result name="Success">/showbooks.jsp</result>
+			<result name="Failed">/noAuthor.jsp</result>
+		</action>
+		
+		<action name="showDetails"	class="MyLibrary.ShowdetailAction">
+			<result name="Success">/bookdetails.jsp</result>
+		
+		</action>
+		<action name="delete" class="MyLibrary.DeleteAction">
+			<result name="Success">/index.jsp</result>
+		</action>
+		
+		<action name="update" class="MyLibrary.UpdateAction">
+		
+			<result name="Success">/update.jsp</result>
+		</action>
+		
+		<action name="updatebook" class="MyLibrary.UpdateBookAction">
+		
+			<result name="Success">/index.jsp</result>
+		</action>
+		
+		<action name="insert" class="MyLibrary.InsertAction">
+		
+			<result name="Success">/index.jsp</result>
+			<result name="Failed">/addauthor.jsp</result>
+		</action>
+		
+		<action name="addauthor" class="MyLibrary.AddAuthorAction">
+			<result name="Success">/index.jsp</result>
+		</action>
+	</package>
+	
+
+</struts>
